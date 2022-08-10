@@ -9,4 +9,9 @@ todoList.nuevoTodo(tarea);
 
 crearTodoHtml(tarea);
 
-console.log(todoList);
+
+localStorage.setItem('mi-key','')
+
+setTimeout(() => {
+    
+}, 1500);

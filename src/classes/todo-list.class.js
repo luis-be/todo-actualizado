@@ -7,11 +7,12 @@ export class TodoList {
     this.todos.push(todo);
   }
 
-  borrarTodo(id) {}
+  borrarTodo(id) {
+    this.todos = this.todos.filter(todo => todo.id != id)
+  }
 
   marcarCompletado(id) {
     for (const todo of this.todos){
-      console.log(todo.id, id)
       if (todo.id == id){
           todo.completado = !todo.completado;
           break;
@@ -19,5 +20,8 @@ export class TodoList {
     }
   }
 
-  eliminarCompletados() {}
+  eliminarCompletados() {
+    this.todos = this.todos.filter(todo => !todo.completado)
+
+  }
 }
