@@ -4,14 +4,11 @@ import { crearTodoHtml } from "./js/componentes";
 
 export const todoList = new TodoList();
 
-const tarea = new Todo("Aprender a programar!");
-todoList.nuevoTodo(tarea);
+todoList.todos.forEach(crearTodoHtml);
 
-crearTodoHtml(tarea);
+// const newTodo = new Todo('aprender algo');
+// todoList.nuevoTodo(newTodo)
 
+todoList.todos[0].imprimirClase();
 
-localStorage.setItem('mi-key','')
-
-setTimeout(() => {
-    
-}, 1500);
+// console.log('todos', todoList.todos)
